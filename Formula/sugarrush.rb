@@ -1,25 +1,25 @@
 class Sugarrush < Formula
   desc "A terminal UI for viewing Nightscout CGM (blood glucose sensor) data"
   homepage "https://github.com/ronaldlokers/sugarrush"
-  version "2026.7.3"
+  version "2026.8.1"
   if OS.mac?
     if Hardware::CPU.arm?
-      url "https://github.com/ronaldlokers/sugarrush/releases/download/v2026.7.3/sugarrush-aarch64-apple-darwin.tar.xz"
-      sha256 "c146ce159d8ee4273f601cbb807d93e498a18e0f924dfee7c8e37fec25cc9d48"
+      url "https://github.com/ronaldlokers/sugarrush/releases/download/v2026.8.1/sugarrush-aarch64-apple-darwin.tar.xz"
+      sha256 "efa58625d5a4888c6287c421e3d94badd56120b1120860d71a4eee42402c4928"
     end
     if Hardware::CPU.intel?
-      url "https://github.com/ronaldlokers/sugarrush/releases/download/v2026.7.3/sugarrush-x86_64-apple-darwin.tar.xz"
-      sha256 "aa9b7e1eacebde218edbfbf869f0f30bd74e6e7cd91674cc6c332b88e8490ea8"
+      url "https://github.com/ronaldlokers/sugarrush/releases/download/v2026.8.1/sugarrush-x86_64-apple-darwin.tar.xz"
+      sha256 "d1fe454f8f81f55b827336f5c83e75b80aba9576bd50e523e7463e91c8636c40"
     end
   end
   if OS.linux?
     if Hardware::CPU.arm?
-      url "https://github.com/ronaldlokers/sugarrush/releases/download/v2026.7.3/sugarrush-aarch64-unknown-linux-gnu.tar.xz"
-      sha256 "2321f28e93756eade9f6e2992fb26c3905b77156d8adf7072ad4ea0460c5b41d"
+      url "https://github.com/ronaldlokers/sugarrush/releases/download/v2026.8.1/sugarrush-aarch64-unknown-linux-gnu.tar.xz"
+      sha256 "28694ae6597cc810d99866852911bf48647b35f461782c621b566deb9d6d793d"
     end
     if Hardware::CPU.intel?
-      url "https://github.com/ronaldlokers/sugarrush/releases/download/v2026.7.3/sugarrush-x86_64-unknown-linux-gnu.tar.xz"
-      sha256 "d9eaeead47e347d901c2eae48976873d300eb6fe1d86af854e6157376e96a9a3"
+      url "https://github.com/ronaldlokers/sugarrush/releases/download/v2026.8.1/sugarrush-x86_64-unknown-linux-gnu.tar.xz"
+      sha256 "a61b4c48364ed6518ebb7b7dd34edbc07bd94c23df76fd975065c79baa9d0685"
     end
   end
   license "MIT"
