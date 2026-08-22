@@ -1,25 +1,25 @@
 class Sugarrush < Formula
   desc "A terminal UI for viewing Nightscout CGM (blood glucose sensor) data"
   homepage "https://github.com/ronaldlokers/sugarrush"
-  version "2026.8.1"
+  version "2026.8.2"
   if OS.mac?
     if Hardware::CPU.arm?
-      url "https://github.com/ronaldlokers/sugarrush/releases/download/v2026.8.1/sugarrush-aarch64-apple-darwin.tar.xz"
-      sha256 "efa58625d5a4888c6287c421e3d94badd56120b1120860d71a4eee42402c4928"
+      url "https://github.com/ronaldlokers/sugarrush/releases/download/v2026.8.2/sugarrush-aarch64-apple-darwin.tar.xz"
+      sha256 "5c8bde66ab87ba7ea6a237d203b430dd642ec041b3f680339e84cc9ad30bef21"
     end
     if Hardware::CPU.intel?
-      url "https://github.com/ronaldlokers/sugarrush/releases/download/v2026.8.1/sugarrush-x86_64-apple-darwin.tar.xz"
-      sha256 "d1fe454f8f81f55b827336f5c83e75b80aba9576bd50e523e7463e91c8636c40"
+      url "https://github.com/ronaldlokers/sugarrush/releases/download/v2026.8.2/sugarrush-x86_64-apple-darwin.tar.xz"
+      sha256 "97fc58686ff807669b3738c5a9cbbfd73db0622d24474c342aa802e0683426dc"
     end
   end
   if OS.linux?
     if Hardware::CPU.arm?
-      url "https://github.com/ronaldlokers/sugarrush/releases/download/v2026.8.1/sugarrush-aarch64-unknown-linux-gnu.tar.xz"
-      sha256 "28694ae6597cc810d99866852911bf48647b35f461782c621b566deb9d6d793d"
+      url "https://github.com/ronaldlokers/sugarrush/releases/download/v2026.8.2/sugarrush-aarch64-unknown-linux-gnu.tar.xz"
+      sha256 "a40c2547f0bc805bcd411cf6a10c9930165943c0c9d562760d5ac4c5dcba17d7"
     end
     if Hardware::CPU.intel?
-      url "https://github.com/ronaldlokers/sugarrush/releases/download/v2026.8.1/sugarrush-x86_64-unknown-linux-gnu.tar.xz"
-      sha256 "a61b4c48364ed6518ebb7b7dd34edbc07bd94c23df76fd975065c79baa9d0685"
+      url "https://github.com/ronaldlokers/sugarrush/releases/download/v2026.8.2/sugarrush-x86_64-unknown-linux-gnu.tar.xz"
+      sha256 "af18d17a417e2844d708cf6c1cdd1ae200db7a47900843ee9f7c6f9f8d8996a4"
     end
   end
   license "MIT"
@@ -50,10 +50,18 @@ class Sugarrush < Formula
   end
 
   def install
-    bin.install "sugarrush" if OS.mac? && Hardware::CPU.arm?
-    bin.install "sugarrush" if OS.mac? && Hardware::CPU.intel?
-    bin.install "sugarrush" if OS.linux? && Hardware::CPU.arm?
-    bin.install "sugarrush" if OS.linux? && Hardware::CPU.intel?
+    if OS.mac? && Hardware::CPU.arm?
+      bin.install "sugarrush"
+    end
+    if OS.mac? && Hardware::CPU.intel?
+      bin.install "sugarrush"
+    end
+    if OS.linux? && Hardware::CPU.arm?
+      bin.install "sugarrush"
+    end
+    if OS.linux? && Hardware::CPU.intel?
+      bin.install "sugarrush"
+    end
 
     install_binary_aliases!
 
